@@ -2,6 +2,7 @@
 SELECT st_dept FROM tbl_student
 GROUP BY st_dept;
 
+DROP TABLE tbl_student;
 CREATE TABLE tbl_student (
     st_num CHAR(5) PRIMARY KEY,
     st_name VARCHAR2(20),
