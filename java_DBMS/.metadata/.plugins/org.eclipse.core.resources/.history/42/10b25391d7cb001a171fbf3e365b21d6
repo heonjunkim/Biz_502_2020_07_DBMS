@@ -1,0 +1,5 @@
+package com.biz.dbms.domain;
+
+public class OrderVO {
+
+}

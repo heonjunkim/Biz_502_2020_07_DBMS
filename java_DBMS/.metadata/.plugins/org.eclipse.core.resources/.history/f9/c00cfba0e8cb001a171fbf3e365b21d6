@@ -1,0 +1,35 @@
+package com.biz.dbms;
+
+import java.sql.Connection;
+import java.util.Scanner;
+
+import com.biz.config.DBConnection;
+import com.biz.config.DBContract;
+import com.biz.dbms.domain.OrderVO;
+
+public class JdbcEx_03 {
+	public static void main(String[] args) {
+		Connection dbConn = DBConnection.getDBConnection();
+		String insert_sql = DBContract.ORDER_INSERT;
+		Scanner scan = new Scanner(System.in);
+		
+		OrderVO orderVO = new OrderVO();
+		
+		System.out.println("주문번호 (6자리)>>");
+		String str_num = scan.nextLine();
+		
+		System.out.println("고객번호(5자리) >>");
+		String str_cnum = scan.nextLine();
+		
+		System.out.println("상품코드(5자리) >>");
+		String str_pcode = scan.nextLine();
+		
+		orderVO.setO_num(str_num);
+		orderVO.setO_cnum(o_cnum);
+		
+		
+		
+
+	}
+
+}

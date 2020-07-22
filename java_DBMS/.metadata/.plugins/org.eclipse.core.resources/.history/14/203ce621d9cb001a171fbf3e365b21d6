@@ -1,0 +1,37 @@
+package com.biz.config;
+
+public class DBContract {
+	
+	public final static String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
+	public final static String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
+	public final static String DB_USER = "user2";
+	public final static String DB_PASSSWORD = "user2";
+	
+	public static class ORDER {
+		
+		public final static String TABLE = "TBL_ORDER";
+		public final static String COL_O_SEQ = "o_seq";	//NUMBER
+		public final static String COL_O_NUM = "o_num";	//CHAR	//(6 BYTE)
+		public final static String COL_O_DATE = "o_date";	//CHAR	//(10 BYTE)
+		public final static String COL_O_CNUM = "o_cnum";		//CHAR	//(5 BYTE)
+		public final static String COL_O_PCODE= " o_pcode";		//CHAR	//(6 BYTE)
+		public final static String COL_O_PAME = "o_pame";		//NVARCHAR2	//(125 CHAR)
+		public final static String COL_O_PRICE = "o_price";		// NUMBER
+		public final static String COL_O_QTY = "o_qty";		// NUMBER
+		public final static String COL_O_TOTAL = "o_total";		// NUMBER
+		
+		
+		public final static int POS_O_SEQ = 1"o_seq";	//NUMBER
+		public final static int POS_O_NUM = 2"o_num";	//CHAR	//(6 BYTE)
+		public final static int POS_O_DATE = 3"o_date";	//CHAR	//(10 BYTE)
+		public final static int POS_O_CNUM = 4"o_cnum";		//CHAR	//(5 BYTE)
+		public final static int POS_O_PCODE= 5" o_pcode";		//CHAR	//(6 BYTE)
+		public final static int POS_O_PAME = 6"o_pame";		//NVARCHAR2	//(125 CHAR)
+		public final static int POS_O_PRICE = 7"o_price";		// NUMBER
+		public final static int POS_O_QTY = 8"o_qty";		// NUMBER
+		public final static int POS_O_TOTAL = 9"o_total";		// NUMBER
+		
+	}
+	
+
+}

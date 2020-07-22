@@ -1,0 +1,29 @@
+package com.biz.dbms;
+
+import com.biz.config.DBContract;
+
+public class Jdbc_Ex01 {
+	public static void main(String[] args) {
+		
+		
+		try {
+			/*
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			Class.forName(DBContract.DB_DRIVER);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.biz.dbms;
+
+public class JdbcEx_02 {
+
+}

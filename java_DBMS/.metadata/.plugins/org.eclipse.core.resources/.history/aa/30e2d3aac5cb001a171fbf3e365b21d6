@@ -1,0 +1,61 @@
+package com.biz.dbms;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.biz.config.DBContract;
+
+public class Jdbc_Ex01 {
+	public static void main(String[] args) {
+		
+		
+		try {
+			/*
+			 * Java에서 JDBC를 통하여 OracleDriver 클래스와 연결하고
+			 * Java 코드에서 보내는 SQL Query를 Oracle DBMS에게 전달을 할 텐데
+			 * 
+			 * 그때 JDBC에서 연결할
+			 * 오라클 연결 도우미 미들웨어(OracleDriver. class)를
+			 * 
+			 * 사용가능한 상태로 만들어주는 Java , 한 기능을 수행하는데
+			 * 그 때 사용하는 JDK가 class.forname() method 이다.
+			 * 			class.forname()
+			 * 
+			 * OracleDriver.class 를 사용할 준비를한다.
+			 * 
+			 * 클래스 객체 = new 클래스() 라고 만들텐데,
+			 * OracleDriver.class는 태생이 java 전용 클래스와 달라서
+			 * 사용하기 위해서 초기화를 하는 방법이 일반 클래스와 다르다.
+			 * 
+			 * class.forName() method의 도움을 받아서 사용할 준비를 수행하는것.
+			 */
+			Class.forName(DBContract.DB_DRIVER);
+			
+			// 오라클에 연결하기
+			// 1. Connection 설치
+			Connection  dbConn = null;
+			// 2. Connection에게 오라클에 접속하라 라고 지시
+			// 3. 접속이 완료되면 접속관련된 정보를 dbConn객체에 저장하라
+			dbConn = DriverManager.getConnection(DBContract.DB_URL, 
+					DBContract.DB_USER, DBContract.DB_PASSSWORD);
+			System.out.println("DB Connection OK!!");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+			System.out.println("프로젝트에 오라클 드라이버가 설치안됐어요");
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+			System.out.println("오라클 접속 과정 문제 x )");
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

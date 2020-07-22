@@ -1,7 +1,6 @@
 # Oracle DBFile upload 금지
 *.dbf
 *.DBF
-
-
+*.xlsx
 
 
