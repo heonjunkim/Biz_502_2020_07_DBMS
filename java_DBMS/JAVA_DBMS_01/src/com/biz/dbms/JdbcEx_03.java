@@ -33,10 +33,10 @@ public class JdbcEx_03 {
 		try {
 			
 			PreparedStatement pSt = dbConn.prepareStatement(insert_sql);
-	//		pSt.setNString(DBContract.ORDER.POS_O_NUM_STR, orderVO.getO_num() );
-		//	pSt.setNString(DBContract.ORDER.POS_O_CNUM_STR, orderVO.getO_cnum() );
-		//	//pSt.setNString(DBContract.ORDER.POS_O_PCODE_STR, orderVO.getO_pcode() );
-		//	pSt.setInt(DBContract.ORDER.POS_O_TOTAL_INT, 1000);
+//			pSt.setNString(DBContract.ORDER.POS_O_NUM_STR, orderVO.getO_num() );
+//			pSt.setNString(DBContract.ORDER.POS_O_CNUM_STR, orderVO.getO_cnum() );
+//			//pSt.setNString(DBContract.ORDER.POS_O_PCODE_STR, orderVO.getO_pcode() );
+//			pSt.setInt(DBContract.ORDER.POS_O_TOTAL_INT, 1000);
 			
 			pSt.setNString(1, orderVO.getO_num());
 			pSt.setNString(2, orderVO.getO_cnum() );
